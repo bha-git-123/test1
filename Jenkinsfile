@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'makeclean'
+                sh 'make clean'
                 archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true 
             }
         }
