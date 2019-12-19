@@ -21,6 +21,7 @@ pipeline {
         stage('Deliver') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
+                slackUploadFile filePath: '/root/.jenkins/workspace/test1/blah.txt', initialComment: 'text'
             }
         }
     }
